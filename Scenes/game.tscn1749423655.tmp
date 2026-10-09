@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cbb71hb67oun6"]
+
+[ext_resource type="Script" uid="uid://c5ccmdeju6uwp" path="res://Scripts/TreeGenerator.gd" id="1_ebmjs"]
+
+[node name="Root" type="Node2D" unique_id=777069398]
+
+[node name="TreeGenerator" type="Node2D" parent="." unique_id=893318795]
+script = ExtResource("1_ebmjs")

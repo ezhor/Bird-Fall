@@ -1,25 +1,21 @@
 [gd_scene format=3 uid="uid://cbb71hb67oun6"]
 
 [ext_resource type="Script" uid="uid://c5ccmdeju6uwp" path="res://Scripts/TreeGenerator.gd" id="1_ebmjs"]
+[ext_resource type="Script" uid="uid://bo11ofgw04q74" path="res://Scripts/CameraFollow.gd" id="1_wowpa"]
 [ext_resource type="PackedScene" uid="uid://osap5wucsomg" path="res://Scenes/Objects/branch.tscn" id="2_qxrlw"]
+[ext_resource type="Script" uid="uid://by3y6j2a3vtfm" path="res://Scripts/Player.gd" id="3_3dryh"]
 [ext_resource type="Texture2D" uid="uid://cpoeu2qwwcnbi" path="res://icon.svg" id="3_wrm1d"]
-
-[sub_resource type="GDScript" id="GDScript_wowpa"]
-script/source = "extends CharacterBody2D
-
-@export var gravity: float
-@export var terminal_speed: float
-
-func _process(delta: float) -> void:
-	if velocity.y < terminal_speed:
-		velocity.y += gravity * delta
-	move_and_slide()
-"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o1e5d"]
 size = Vector2(123, 127)
 
 [node name="Root" type="Node2D" unique_id=777069398]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1180828082 node_paths=PackedStringArray("player")]
+position = Vector2(576, 324)
+offset = Vector2(300, 0)
+script = ExtResource("1_wowpa")
+player = NodePath("../Player")
 
 [node name="TreeGenerator" type="Node2D" parent="." unique_id=893318795]
 script = ExtResource("1_ebmjs")
@@ -27,9 +23,12 @@ branch = ExtResource("2_qxrlw")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=941269532]
 position = Vector2(101, 99)
-script = SubResource("GDScript_wowpa")
-gravity = 100.0
-terminal_speed = 300.0
+script = ExtResource("3_3dryh")
+gravity = 800.0
+terminal_speed = 1000.0
+horizontal_speed = 400.0
+flying_acceleration = 800.0
+flying_top_speed = 200.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=2108005768]
 modulate = Color(0.100000024, 1, 0, 1)

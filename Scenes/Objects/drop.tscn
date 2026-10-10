@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cx65vfpwri6yo" path="res://Scripts/Drop.gd" id="1_ldrpx"]
 [ext_resource type="Texture2D" uid="uid://bbo0iwn8ggb85" path="res://Sprites/particle_radial.png" id="2_3imfo"]
 [ext_resource type="Texture2D" uid="uid://c8iyxpyguucww" path="res://Sprites/leaf_orange.png" id="2_ldrpx"]
+[ext_resource type="Texture2D" uid="uid://c4vgdq6v3242y" path="res://Sprites/snowflake.png" id="2_sgniw"]
 [ext_resource type="Texture2D" uid="uid://bdpoteq2x3onm" path="res://Sprites/leaf_yellow.png" id="3_sgniw"]
 [ext_resource type="Texture2D" uid="uid://b24t2q75i2sfl" path="res://Sprites/leaf_red.png" id="4_jygm7"]
 
@@ -13,11 +14,14 @@ radius = 62.58594
 script = ExtResource("1_ldrpx")
 speed = 1000
 destroy_limit = 2000
+snowflake_probability = 10.0
 glow_delay = 0.3
 glow = NodePath("Glow")
 sprite = NodePath("Leaf")
-leaf_sprites = Array[Texture2D]([ExtResource("2_ldrpx"), ExtResource("3_sgniw"), ExtResource("4_jygm7")])
-colors = Array[Color]([Color(1, 0.43333334, 0, 1), Color(1, 0.94, 0.39999998, 1), Color(0.71, 0.17040001, 0.17040001, 1)])
+leaves_textures = Array[Texture2D]([ExtResource("2_ldrpx"), ExtResource("4_jygm7"), ExtResource("3_sgniw")])
+leaves_colors = Array[Color]([Color(1, 0.4666667, 0, 1), Color(1, 0, 0, 1), Color(1, 0.90000004, 0, 1)])
+snowflake_texture = ExtResource("2_sgniw")
+snowflake_color = Color(0, 0.9833336, 1, 1)
 
 [node name="Glow" type="Sprite2D" parent="." unique_id=1347927729]
 modulate = Color(1, 0.43333334, 0, 1)

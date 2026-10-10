@@ -59,7 +59,7 @@ func _process(delta: float) -> void:
 func _on_area_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		if snowflake_mode:
-			get_tree().change_scene_to_packed(game_over_scene)
+			(func(): get_tree().change_scene_to_packed(game_over_scene)).call_deferred()
 		else:
 			Score.INSTANCE.increase_score()
 			queue_free()

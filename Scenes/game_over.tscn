@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://1a4cg51d2wmx" path="res://Fonts/SF_Arch_Rival_Bold.ttf" id="1_eoghk"]
 [ext_resource type="Texture2D" uid="uid://ckjunflr4ba7j" path="res://Sprites/button_background.png" id="2_14u15"]
-[ext_resource type="Script" uid="uid://cdpmeyieh3k3l" path="res://Scripts/LoadSceneButton.gd" id="3_j3ryr"]
+[ext_resource type="Script" uid="uid://cdpmeyieh3k3l" path="res://Scripts/LoadGameButton.gd" id="3_j3ryr"]
 
 [node name="GameOver" type="Node2D" unique_id=2102891539]
 

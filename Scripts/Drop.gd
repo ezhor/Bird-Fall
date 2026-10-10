@@ -4,6 +4,7 @@ extends Area2D
 @export var speed: int
 @export var destroy_limit: int
 @export_range(0, 100) var snowflake_probability
+@export var game_over_scene: PackedScene
 
 @export_group("Glow")
 @export var glow_delay: float
@@ -57,6 +58,8 @@ func _process(delta: float) -> void:
 
 func _on_area_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		if not snowflake_mode:
+		if snowflake_mode:
+			get_tree().change_scene_to_packed(game_over_scene)
+		else:
 			Score.INSTANCE.increase_score()
 			queue_free()

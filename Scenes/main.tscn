@@ -3,6 +3,7 @@
 [ext_resource type="FontFile" uid="uid://1a4cg51d2wmx" path="res://Fonts/SF_Arch_Rival_Bold.ttf" id="1_8gbba"]
 [ext_resource type="Texture2D" uid="uid://ckjunflr4ba7j" path="res://Sprites/button_background.png" id="2_jjvhh"]
 [ext_resource type="Script" uid="uid://cdpmeyieh3k3l" path="res://Scripts/LoadSceneButton.gd" id="3_kry3j"]
+[ext_resource type="PackedScene" uid="uid://saboc8h5ll5" path="res://Scenes/game.tscn" id="4_jjvhh"]
 
 [node name="Main" type="Node2D" unique_id=577748787]
 
@@ -19,5 +20,6 @@ icon = ExtResource("2_jjvhh")
 flat = true
 icon_alignment = 1
 script = ExtResource("3_kry3j")
+scene = ExtResource("4_jjvhh")
 
 [connection signal="button_down" from="PlayButton" to="PlayButton" method="_on_button_down"]

@@ -1,7 +1,7 @@
 extends Label
 class_name Score
 
-static var INSTANCE: Score
+static var INSTANCE
 
 var score: int
 

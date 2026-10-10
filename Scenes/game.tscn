@@ -1,9 +1,16 @@
 [gd_scene format=3 uid="uid://saboc8h5ll5"]
 
-[ext_resource type="Script" uid="uid://svyxgwylwfly" path="res://Scripts/player.gd" id="1_qxrlw"]
+[ext_resource type="Script" uid="uid://svyxgwylwfly" path="res://Scripts/Player.gd" id="1_qxrlw"]
+[ext_resource type="Script" uid="uid://c50b7c53aoopj" path="res://Scripts/DropGenerator.gd" id="1_wrm1d"]
+[ext_resource type="PackedScene" uid="uid://caxu53ys705gi" path="res://Scenes/Objects/drop.tscn" id="2_3dryh"]
 [ext_resource type="Texture2D" uid="uid://cpoeu2qwwcnbi" path="res://icon.svg" id="3_wrm1d"]
 
 [node name="Root" type="Node2D" unique_id=777069398]
+
+[node name="DropGenerator" type="Node2D" parent="." unique_id=1399013193]
+script = ExtResource("1_wrm1d")
+drop_time = 1.5
+drop = ExtResource("2_3dryh")
 
 [node name="Player" type="Node2D" parent="." unique_id=1605157627]
 position = Vector2(540, 1800)

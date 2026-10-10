@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://caxu53ys705gi"]
+
+[ext_resource type="Script" uid="uid://cx65vfpwri6yo" path="res://Scripts/Drop.gd" id="1_ldrpx"]
+[ext_resource type="Texture2D" uid="uid://cpoeu2qwwcnbi" path="res://icon.svg" id="1_v4nba"]
+
+[node name="Drop" type="Node2D" unique_id=1556468185]
+script = ExtResource("1_ldrpx")
+speed = 500
+destroy_limit = 2000
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=145289757]
+modulate = Color(0.116666794, 1, 0, 1)
+texture = ExtResource("1_v4nba")

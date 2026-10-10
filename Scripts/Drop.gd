@@ -37,6 +37,7 @@ func _process(delta: float) -> void:
 	position.y += speed * delta
 	if position.y > destroy_limit:
 		queue_free()
+		Missed.INSTANCE.increase_missed()
 
 func _on_area_entered(body: Node2D) -> void:
 	if body.name == "Player":

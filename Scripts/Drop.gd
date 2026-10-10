@@ -15,19 +15,19 @@ func _ready() -> void:
 	start_glow_tween()
 	
 func set_leaf() -> void:
-	var i = randi_range(0, leaf_sprites.size() - 1)
+	var i: int = randi_range(0, leaf_sprites.size() - 1)
 	sprite.texture = leaf_sprites[i]
 	glow.modulate = colors[i]
 	sprite.rotation_degrees = randf_range(0, 360)
 
 func start_rotation_tween():
-	var tween = create_tween().set_loops()
+	var tween: Tween = create_tween().set_loops()
 	tween.tween_property(sprite, "rotation_degrees", sprite.rotation_degrees + 180, 1.0)
 	tween.chain().tween_property(sprite, "rotation_degrees", sprite.rotation_degrees + 360, 1.0)
 
 func start_glow_tween():
-	var tween = create_tween().set_loops()
-	var color = glow.modulate
+	var tween: Tween = create_tween().set_loops()
+	var color: Color = glow.modulate
 	color.a = 0
 	tween.tween_property(glow, "modulate", color, glow_delay)
 	color.a = 1

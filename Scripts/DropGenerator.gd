@@ -9,7 +9,7 @@ func _ready() -> void:
 	create_timer()
 
 func _on_timeout() -> void:
-	var instance = drop.instantiate() as Node2D
+	var instance: Node2D = drop.instantiate()
 	add_child(instance)
 	instance.position.x = randf_range(Constants.MIN_POSITION, Constants.MAX_POSITION)
 	

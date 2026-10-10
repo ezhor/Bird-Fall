@@ -1,13 +1,34 @@
 [gd_scene format=3 uid="uid://caxu53ys705gi"]
 
 [ext_resource type="Script" uid="uid://cx65vfpwri6yo" path="res://Scripts/Drop.gd" id="1_ldrpx"]
-[ext_resource type="Texture2D" uid="uid://cpoeu2qwwcnbi" path="res://icon.svg" id="1_v4nba"]
+[ext_resource type="Texture2D" uid="uid://bbo0iwn8ggb85" path="res://Sprites/particle_radial.png" id="2_3imfo"]
+[ext_resource type="Texture2D" uid="uid://c8iyxpyguucww" path="res://Sprites/leaf_orange.png" id="2_ldrpx"]
+[ext_resource type="Texture2D" uid="uid://bdpoteq2x3onm" path="res://Sprites/leaf_yellow.png" id="3_sgniw"]
+[ext_resource type="Texture2D" uid="uid://b24t2q75i2sfl" path="res://Sprites/leaf_red.png" id="4_jygm7"]
 
-[node name="Drop" type="Node2D" unique_id=1556468185]
+[sub_resource type="CircleShape2D" id="CircleShape2D_uwtqh"]
+radius = 62.58594
+
+[node name="Drop" type="Area2D" unique_id=1278817778 node_paths=PackedStringArray("glow", "sprite")]
 script = ExtResource("1_ldrpx")
-speed = 500
+speed = 1000
 destroy_limit = 2000
+glow_delay = 0.3
+glow = NodePath("Glow")
+sprite = NodePath("Leaf")
+leaf_sprites = Array[Texture2D]([ExtResource("2_ldrpx"), ExtResource("3_sgniw"), ExtResource("4_jygm7")])
+colors = Array[Color]([Color(1, 0.43333334, 0, 1), Color(1, 0.94, 0.39999998, 1), Color(0.71, 0.17040001, 0.17040001, 1)])
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=145289757]
-modulate = Color(0.116666794, 1, 0, 1)
-texture = ExtResource("1_v4nba")
+[node name="Glow" type="Sprite2D" parent="." unique_id=1347927729]
+modulate = Color(1, 0.43333334, 0, 1)
+scale = Vector2(2, 2)
+texture = ExtResource("2_3imfo")
+
+[node name="Leaf" type="Sprite2D" parent="." unique_id=145289757]
+z_index = 1
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("2_ldrpx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=883842099]
+visible = false
+shape = SubResource("CircleShape2D_uwtqh")

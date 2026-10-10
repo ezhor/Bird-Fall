@@ -40,4 +40,5 @@ func _process(delta: float) -> void:
 
 func _on_area_entered(body: Node2D) -> void:
 	if body.name == "Player":
+		Score.INSTANCE.increase_score()
 		queue_free()

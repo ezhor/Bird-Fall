@@ -4,9 +4,13 @@
 [ext_resource type="Script" uid="uid://c50b7c53aoopj" path="res://Scripts/DropGenerator.gd" id="1_wrm1d"]
 [ext_resource type="PackedScene" uid="uid://caxu53ys705gi" path="res://Scenes/Objects/drop.tscn" id="2_3dryh"]
 [ext_resource type="Texture2D" uid="uid://qt0yiniq8pdg" path="res://Sprites/bird_idle.png" id="4_3dryh"]
+[ext_resource type="Script" uid="uid://byly63mndi1p1" path="res://Scripts/Score.gd" id="5_wowpa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uwtqh"]
 radius = 111.0045
+
+[sub_resource type="LabelSettings" id="LabelSettings_3dryh"]
+font_size = 70
 
 [node name="Root" type="Node2D" unique_id=777069398]
 
@@ -26,3 +30,12 @@ texture = ExtResource("4_3dryh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1845524271]
 shape = SubResource("CircleShape2D_uwtqh")
+
+[node name="Score" type="Label" parent="." unique_id=831258828]
+offset_left = 30.0
+offset_top = 10.0
+offset_right = 254.0
+offset_bottom = 106.0
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_3dryh")
+script = ExtResource("5_wowpa")

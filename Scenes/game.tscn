@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://1a4cg51d2wmx" path="res://Fonts/SF_Arch_Rival_Bold.ttf" id="5_1l0tm"]
 [ext_resource type="Script" uid="uid://byly63mndi1p1" path="res://Scripts/Score.gd" id="5_wowpa"]
 [ext_resource type="Script" uid="uid://d33qmdg7dxhce" path="res://Scripts/Missed.gd" id="6_i6g32"]
+[ext_resource type="PackedScene" uid="uid://sydm08ny7jtd" path="res://Scenes/game_over.tscn" id="8_v158k"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uwtqh"]
 radius = 111.0045
@@ -57,3 +58,4 @@ text = "Missed: 0/8"
 label_settings = SubResource("LabelSettings_3dryh")
 script = ExtResource("6_i6g32")
 max_missed = 8
+game_over_scene = ExtResource("8_v158k")

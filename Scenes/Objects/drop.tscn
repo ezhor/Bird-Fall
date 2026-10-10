@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cx65vfpwri6yo" path="res://Scripts/Drop.gd" id="1_ldrpx"]
 [ext_resource type="Texture2D" uid="uid://bbo0iwn8ggb85" path="res://Sprites/particle_radial.png" id="2_3imfo"]
+[ext_resource type="PackedScene" uid="uid://sydm08ny7jtd" path="res://Scenes/game_over.tscn" id="2_hd771"]
 [ext_resource type="Texture2D" uid="uid://c8iyxpyguucww" path="res://Sprites/leaf_orange.png" id="2_ldrpx"]
 [ext_resource type="Texture2D" uid="uid://c4vgdq6v3242y" path="res://Sprites/snowflake.png" id="2_sgniw"]
 [ext_resource type="Texture2D" uid="uid://bdpoteq2x3onm" path="res://Sprites/leaf_yellow.png" id="3_sgniw"]
@@ -15,6 +16,7 @@ script = ExtResource("1_ldrpx")
 speed = 1000
 destroy_limit = 2000
 snowflake_probability = 10.0
+game_over_scene = ExtResource("2_hd771")
 glow_delay = 0.3
 glow = NodePath("Glow")
 sprite = NodePath("Leaf")

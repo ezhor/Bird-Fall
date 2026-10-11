@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckjunflr4ba7j"
-path="res://.godot/imported/button_background.png-780ab9bc5e7075a6ac15cf065d163699.ctex"
+uid="uid://dtjx74tdbl7ic"
+path="res://.godot/imported/button_gameover_background.png-e33ceffff07132d4f6be6da9e31592b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/button_background.png"
-dest_files=["res://.godot/imported/button_background.png-780ab9bc5e7075a6ac15cf065d163699.ctex"]
+source_file="res://Sprites/button_gameover_background.png"
+dest_files=["res://.godot/imported/button_gameover_background.png-e33ceffff07132d4f6be6da9e31592b4.ctex"]
 
 [params]
 

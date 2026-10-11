@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://dsf6pb1wxddyr" path="res://Sprites/gameover.png" id="1_14u15"]
 [ext_resource type="FontFile" uid="uid://1a4cg51d2wmx" path="res://Fonts/SF_Arch_Rival_Bold.ttf" id="1_eoghk"]
 [ext_resource type="Script" uid="uid://bp4c82dayjt8p" path="res://Scripts/GameOver.gd" id="1_j3ryr"]
-[ext_resource type="Texture2D" uid="uid://ckjunflr4ba7j" path="res://Sprites/button_background.png" id="2_14u15"]
 [ext_resource type="Script" uid="uid://cdpmeyieh3k3l" path="res://Scripts/LoadGameButton.gd" id="3_j3ryr"]
+[ext_resource type="Texture2D" uid="uid://dtjx74tdbl7ic" path="res://Sprites/button_gameover_background.png" id="4_14u15"]
 
 [node name="GameOver" type="Node2D" unique_id=2102891539 node_paths=PackedStringArray("max_score_label", "score_label")]
 script = ExtResource("1_j3ryr")
@@ -61,10 +61,11 @@ offset_top = 740.0
 offset_right = 1141.0
 offset_bottom = 1260.0
 scale = Vector2(0.8, 0.8)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_eoghk")
-theme_override_font_sizes/font_size = 150
+theme_override_font_sizes/font_size = 140
 text = "Play again"
-icon = ExtResource("2_14u15")
+icon = ExtResource("4_14u15")
 flat = true
 icon_alignment = 1
 script = ExtResource("3_j3ryr")

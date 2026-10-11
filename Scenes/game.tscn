@@ -35,7 +35,10 @@ script = ExtResource("3_o5yvi")
 
 [node name="DropGenerator" type="Node2D" parent="." unique_id=1399013193]
 script = ExtResource("1_wrm1d")
-drop_time = 1.0
+drop_start_time = 1.5
+drop_end_time = 0.25
+difficulty_increase_time = 5.0
+diffculty_increase = 0.1
 drop = ExtResource("2_3dryh")
 
 [node name="Player" type="Area2D" parent="." unique_id=1441928846]

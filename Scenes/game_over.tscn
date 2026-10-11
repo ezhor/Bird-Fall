@@ -2,10 +2,50 @@
 
 [ext_resource type="Texture2D" uid="uid://dsf6pb1wxddyr" path="res://Sprites/gameover.png" id="1_14u15"]
 [ext_resource type="FontFile" uid="uid://1a4cg51d2wmx" path="res://Fonts/SF_Arch_Rival_Bold.ttf" id="1_eoghk"]
+[ext_resource type="Script" uid="uid://bp4c82dayjt8p" path="res://Scripts/GameOver.gd" id="1_j3ryr"]
 [ext_resource type="Texture2D" uid="uid://ckjunflr4ba7j" path="res://Sprites/button_background.png" id="2_14u15"]
 [ext_resource type="Script" uid="uid://cdpmeyieh3k3l" path="res://Scripts/LoadGameButton.gd" id="3_j3ryr"]
 
-[node name="GameOver" type="Node2D" unique_id=2102891539]
+[node name="GameOver" type="Node2D" unique_id=2102891539 node_paths=PackedStringArray("max_score_label", "score_label")]
+script = ExtResource("1_j3ryr")
+max_score_label = NodePath("MaxScoreLabel")
+score_label = NodePath("YourScoreLabel")
+
+[node name="WinterArrivedLabel" type="Label" parent="." unique_id=1445301861]
+offset_top = 80.0
+offset_right = 1080.0
+offset_bottom = 245.0
+theme_override_colors/font_color = Color(0.17000002, 0.8478333, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 54
+theme_override_fonts/font = ExtResource("1_eoghk")
+theme_override_font_sizes/font_size = 120
+text = "Winter arrived!"
+horizontal_alignment = 1
+
+[node name="MaxScoreLabel" type="Label" parent="." unique_id=245149083]
+offset_top = 308.0
+offset_right = 1080.0
+offset_bottom = 507.0
+theme_override_colors/font_color = Color(0, 0.39999986, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 54
+theme_override_fonts/font = ExtResource("1_eoghk")
+theme_override_font_sizes/font_size = 80
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="YourScoreLabel" type="Label" parent="." unique_id=1274060157]
+offset_top = 539.0
+offset_right = 1080.0
+offset_bottom = 786.0
+theme_override_colors/font_color = Color(0, 0.39999986, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 54
+theme_override_fonts/font = ExtResource("1_eoghk")
+theme_override_font_sizes/font_size = 80
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1017287447]
 position = Vector2(540, 960)

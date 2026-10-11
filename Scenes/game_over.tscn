@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dsf6pb1wxddyr" path="res://Sprites/gameover.png" id="1_14u15"]
 [ext_resource type="FontFile" uid="uid://1a4cg51d2wmx" path="res://Fonts/SF_Arch_Rival_Bold.ttf" id="1_eoghk"]
 [ext_resource type="Script" uid="uid://bp4c82dayjt8p" path="res://Scripts/GameOver.gd" id="1_j3ryr"]
+[ext_resource type="AudioStream" uid="uid://dt3qddkey3vrc" path="res://Audio/SFX/bird_death.ogg" id="2_j3ryr"]
 [ext_resource type="Script" uid="uid://cdpmeyieh3k3l" path="res://Scripts/LoadGameButton.gd" id="3_j3ryr"]
 [ext_resource type="Texture2D" uid="uid://dtjx74tdbl7ic" path="res://Sprites/button_gameover_background.png" id="4_14u15"]
 
@@ -10,6 +11,10 @@
 script = ExtResource("1_j3ryr")
 max_score_label = NodePath("MaxScoreLabel")
 score_label = NodePath("YourScoreLabel")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2123761201]
+stream = ExtResource("2_j3ryr")
+autoplay = true
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1017287447]
 position = Vector2(540, 960)

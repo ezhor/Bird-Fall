@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://saboc8h5ll5"]
 
 [ext_resource type="AudioStream" uid="uid://dld452eobn07g" path="res://Audio/Music/theme_game.ogg" id="1_h4fw4"]
+[ext_resource type="Texture2D" uid="uid://boxqofw13juu6" path="res://Sprites/game_background.png" id="1_ldgsr"]
 [ext_resource type="Script" uid="uid://svyxgwylwfly" path="res://Scripts/Player.gd" id="1_qxrlw"]
 [ext_resource type="Script" uid="uid://c50b7c53aoopj" path="res://Scripts/DropGenerator.gd" id="1_wrm1d"]
 [ext_resource type="PackedScene" uid="uid://caxu53ys705gi" path="res://Scenes/Objects/drop.tscn" id="2_3dryh"]
@@ -20,6 +21,10 @@ font_color = Color(0, 0, 0, 1)
 outline_size = 20
 
 [node name="Root" type="Node2D" unique_id=777069398]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=116829680]
+position = Vector2(540, 960)
+texture = ExtResource("1_ldgsr")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=746888425]
 stream = ExtResource("1_h4fw4")

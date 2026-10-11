@@ -3,14 +3,19 @@
 [ext_resource type="FontFile" uid="uid://1a4cg51d2wmx" path="res://Fonts/SF_Arch_Rival_Bold.ttf" id="1_8gbba"]
 [ext_resource type="Texture2D" uid="uid://ckjunflr4ba7j" path="res://Sprites/button_background.png" id="2_jjvhh"]
 [ext_resource type="Script" uid="uid://cdpmeyieh3k3l" path="res://Scripts/LoadGameButton.gd" id="3_kry3j"]
+[ext_resource type="Texture2D" uid="uid://0rttynewiubw" path="res://Sprites/main_background.png" id="4_jjvhh"]
 
 [node name="Main" type="Node2D" unique_id=577748787]
 
+[node name="Background" type="Sprite2D" parent="." unique_id=1827065864]
+position = Vector2(540, 960)
+texture = ExtResource("4_jjvhh")
+
 [node name="PlayButton" type="Button" parent="." unique_id=329019530]
-offset_left = 109.0
-offset_top = 819.0
-offset_right = 1141.0
-offset_bottom = 1339.0
+offset_left = 110.0
+offset_top = 740.0
+offset_right = 1142.0
+offset_bottom = 1260.0
 scale = Vector2(0.8, 0.8)
 theme_override_fonts/font = ExtResource("1_8gbba")
 theme_override_font_sizes/font_size = 250
@@ -19,5 +24,23 @@ icon = ExtResource("2_jjvhh")
 flat = true
 icon_alignment = 1
 script = ExtResource("3_kry3j")
+
+[node name="Label" type="Label" parent="." unique_id=569082926]
+offset_right = 1080.0
+offset_bottom = 609.0
+theme_override_colors/font_color = Color(1, 0.76862746, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.87058824, 0.4627451, 0, 1)
+theme_override_constants/line_spacing = -105
+theme_override_constants/shadow_offset_x = 42
+theme_override_constants/shadow_offset_y = 29
+theme_override_constants/outline_size = 30
+theme_override_constants/shadow_outline_size = 75
+theme_override_fonts/font = ExtResource("1_8gbba")
+theme_override_font_sizes/font_size = 250
+text = "Bird
+Fall"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="button_down" from="PlayButton" to="PlayButton" method="_on_button_down"]

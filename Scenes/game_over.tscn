@@ -11,11 +11,15 @@ script = ExtResource("1_j3ryr")
 max_score_label = NodePath("MaxScoreLabel")
 score_label = NodePath("YourScoreLabel")
 
+[node name="Background" type="Sprite2D" parent="." unique_id=1017287447]
+position = Vector2(540, 960)
+texture = ExtResource("1_14u15")
+
 [node name="WinterArrivedLabel" type="Label" parent="." unique_id=1445301861]
 offset_top = 80.0
 offset_right = 1080.0
 offset_bottom = 245.0
-theme_override_colors/font_color = Color(0.17000002, 0.8478333, 1, 1)
+theme_override_colors/font_color = Color(0, 0.7023333, 0.86, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 54
 theme_override_fonts/font = ExtResource("1_eoghk")
@@ -32,30 +36,30 @@ theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 54
 theme_override_fonts/font = ExtResource("1_eoghk")
 theme_override_font_sizes/font_size = 80
+text = "Max score
+0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="YourScoreLabel" type="Label" parent="." unique_id=1274060157]
-offset_top = 539.0
+offset_top = 524.0
 offset_right = 1080.0
-offset_bottom = 786.0
+offset_bottom = 771.0
 theme_override_colors/font_color = Color(0, 0.39999986, 1, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 54
 theme_override_fonts/font = ExtResource("1_eoghk")
 theme_override_font_sizes/font_size = 80
+text = "Your score
+0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1017287447]
-position = Vector2(540, 960)
-texture = ExtResource("1_14u15")
-
 [node name="PlayButton" type="Button" parent="." unique_id=1181957224]
 offset_left = 109.0
-offset_top = 727.0
+offset_top = 740.0
 offset_right = 1141.0
-offset_bottom = 1247.0
+offset_bottom = 1260.0
 scale = Vector2(0.8, 0.8)
 theme_override_fonts/font = ExtResource("1_eoghk")
 theme_override_font_sizes/font_size = 150

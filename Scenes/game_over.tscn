@@ -1,16 +1,21 @@
 [gd_scene format=3 uid="uid://sydm08ny7jtd"]
 
+[ext_resource type="Texture2D" uid="uid://dsf6pb1wxddyr" path="res://Sprites/gameover.png" id="1_14u15"]
 [ext_resource type="FontFile" uid="uid://1a4cg51d2wmx" path="res://Fonts/SF_Arch_Rival_Bold.ttf" id="1_eoghk"]
 [ext_resource type="Texture2D" uid="uid://ckjunflr4ba7j" path="res://Sprites/button_background.png" id="2_14u15"]
 [ext_resource type="Script" uid="uid://cdpmeyieh3k3l" path="res://Scripts/LoadGameButton.gd" id="3_j3ryr"]
 
 [node name="GameOver" type="Node2D" unique_id=2102891539]
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1017287447]
+position = Vector2(540, 960)
+texture = ExtResource("1_14u15")
+
 [node name="PlayButton" type="Button" parent="." unique_id=1181957224]
 offset_left = 109.0
-offset_top = 819.0
+offset_top = 727.0
 offset_right = 1141.0
-offset_bottom = 1339.0
+offset_bottom = 1247.0
 scale = Vector2(0.8, 0.8)
 theme_override_fonts/font = ExtResource("1_eoghk")
 theme_override_font_sizes/font_size = 150

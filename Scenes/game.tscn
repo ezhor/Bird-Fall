@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://svyxgwylwfly" path="res://Scripts/Player.gd" id="1_qxrlw"]
 [ext_resource type="Script" uid="uid://c50b7c53aoopj" path="res://Scripts/DropGenerator.gd" id="1_wrm1d"]
 [ext_resource type="PackedScene" uid="uid://caxu53ys705gi" path="res://Scenes/Objects/drop.tscn" id="2_3dryh"]
+[ext_resource type="Script" uid="uid://c8nfkhuwa6w23" path="res://Scripts/AudioFix.gd" id="3_o5yvi"]
 [ext_resource type="Texture2D" uid="uid://qt0yiniq8pdg" path="res://Sprites/bird_idle.png" id="4_3dryh"]
 [ext_resource type="FontFile" uid="uid://1a4cg51d2wmx" path="res://Fonts/SF_Arch_Rival_Bold.ttf" id="5_1l0tm"]
 [ext_resource type="Script" uid="uid://byly63mndi1p1" path="res://Scripts/Score.gd" id="5_wowpa"]
@@ -30,6 +31,7 @@ texture = ExtResource("1_ldgsr")
 stream = ExtResource("1_h4fw4")
 autoplay = true
 parameters/looping = true
+script = ExtResource("3_o5yvi")
 
 [node name="DropGenerator" type="Node2D" parent="." unique_id=1399013193]
 script = ExtResource("1_wrm1d")

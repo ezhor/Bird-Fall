@@ -1,6 +1,8 @@
 extends Label
 class_name Score
 
+@export var audio: AudioStreamPlayer2D
+
 const SAVE_PATH: String = "user://max_score.save"
 
 static var INSTANCE: Score
@@ -16,6 +18,7 @@ func _ready() -> void:
 
 func increase_score() -> void:
 	score += 1
+	audio.play()
 	update_label()
 
 func update_label() -> void:
